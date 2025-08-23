@@ -1,3 +1,8 @@
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,10 +13,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeTest;
@@ -21,10 +24,21 @@ public class TestCases {
 
 	WebDriver driver = new ChromeDriver();
 	Random rand = new Random();
+	
+	
+	Connection con;
+	Statement stmt;
+	ResultSet rs;
+	String FirstName;
+	String LastName;
+	String phone;
+	String CustomerName;
 
 	@BeforeTest
 
-	public void SetUp() {
+	public void SetUp() throws SQLException {
+		
+		con=DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels","root","123456");
 		driver.get("https://codenboxautomationlab.com/practice/");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
@@ -188,7 +202,7 @@ public class TestCases {
 		
 		
 	}
-	@Test(priority =11)
+	@Test(priority =11,enabled=false)
 	public void TopAndRelod() throws InterruptedException {
 
 		JavascriptExecutor js=(JavascriptExecutor) driver;
@@ -204,12 +218,69 @@ public class TestCases {
 		
 		
 	
-		///
+
 		
 		
 		
 	}
+	@Test(enabled=true)
+	public void Calaender() throws InterruptedException, SQLException {
+		
+		WebElement Calender=driver.findElement(By.linkText("Booking Calendar"));
+		Calender.click();
+		
+		Set<String> Handles=driver.getWindowHandles();
+		List<String> AllTabs=new ArrayList<>(Handles);
+		
+		driver.switchTo().window(AllTabs.get(1));
+		
+		WebElement BookAppoitment=driver.findElement(By.linkText("23"));
+		Thread.sleep(2000);
+		BookAppoitment.click();
+		Thread.sleep(3000);
+		int randomnum=rand.nextInt(144,147);
+		String QueryToAdd="select * from customers where customerNumber="+randomnum;
+		stmt=con.createStatement();
+		rs=stmt.executeQuery(QueryToAdd);
+		
+		while(rs.next()) {
+			
+			
+			FirstName=rs.getString("contactFirstName");
+			LastName=rs.getString("contactLastName");
+			phone=rs.getString("phone");
+			CustomerName=rs.getString("customerName");
+			
+			
+			
+		}
+		int Random=rand.nextInt(6000);
+		String Email=FirstName+LastName+Random+"@gmail.com";
+		
+		WebElement FirstNameInput=driver.findElement(By.id("name1"));
+		WebElement LastNameInput=driver.findElement(By.id("secondname1"));
+		WebElement EmailInput=driver.findElement(By.id("email1"));
+		WebElement Phoneinput=driver.findElement(By.id("phone1"));
+		WebElement Details=driver.findElement(By.id("details1"));
+
+		
+
+		
+		FirstNameInput.sendKeys(FirstName);
+		LastNameInput.sendKeys(LastName);
+		EmailInput.sendKeys(Email);
+		Phoneinput.sendKeys(phone);
+		Details.sendKeys(CustomerName);
+		
+
 	
+		
+		
+		
+		
+		
+		
+	}
 	
 	
 	

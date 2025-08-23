@@ -5,8 +5,8 @@
     <classes>
       <class name="TestCases">
         <methods>
+          <include name="Calaender"/>
           <include name="SetUp"/>
-          <include name="TopAndRelod"/>
         </methods>
       </class> <!-- TestCases -->
     </classes>
