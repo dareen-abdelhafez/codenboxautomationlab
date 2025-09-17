@@ -5,7 +5,7 @@
     <classes>
       <class name="TestCases">
         <methods>
-          <include name="Calaender"/>
+          <include name="TakeAScreenShot"/>
           <include name="SetUp"/>
         </methods>
       </class> <!-- TestCases -->

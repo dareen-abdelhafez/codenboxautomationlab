@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse-1004229550\testng-customsuite.xml</span>
+                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse-1218996814\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="AddData">AddData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="Calaender">Calaender</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="DeleteData">DeleteData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="TakeAScreenShot">TakeAScreenShot</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="TestCases" class="method navigator-link" hash-for-method="UpdataData">UpdataData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -126,9 +146,37 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="AddData">
+                  </a> <!-- AddData -->
+                  <span class="method-name">AddData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="Calaender">
                   </a> <!-- Calaender -->
                   <span class="method-name">Calaender</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteData">
+                  </a> <!-- DeleteData -->
+                  <span class="method-name">DeleteData</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TakeAScreenShot">
+                  </a> <!-- TakeAScreenShot -->
+                  <span class="method-name">TakeAScreenShot</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UpdataData">
+                  </a> <!-- UpdataData -->
+                  <span class="method-name">UpdataData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +184,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse-1004229550\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse-1218996814\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -185,16 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Calaender')
 data.setCell(0, 2, 'TestCases')
-data.setCell(0, 3, 7891);
+data.setCell(0, 3, 8298);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'TakeAScreenShot')
+data.setCell(1, 2, 'TestCases')
+data.setCell(1, 3, 6341);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'AddData')
+data.setCell(2, 2, 'TestCases')
+data.setCell(2, 3, 20);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'DeleteData')
+data.setCell(3, 2, 'TestCases')
+data.setCell(3, 3, 10);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'UpdataData')
+data.setCell(4, 2, 'TestCases')
+data.setCell(4, 3, 5);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -215,25 +279,25 @@ return data;
             <div class="ignored-class-div">
               <span class="ignored-class-name">TestCases</span>
               <div class="ignored-methods-div">
+                <span class="ignored-method-name">opentab</span>
+                <br/>
                 <span class="ignored-method-name">Dynamic_Drop_Down</span>
-                <br/>
-                <span class="ignored-method-name">RadioButton</span>
-                <br/>
-                <span class="ignored-method-name">TheTable</span>
                 <br/>
                 <span class="ignored-method-name">openwindow</span>
                 <br/>
-                <span class="ignored-method-name">Static_Drop_Down</span>
-                <br/>
-                <span class="ignored-method-name">HideAndShow</span>
+                <span class="ignored-method-name">RadioButton</span>
                 <br/>
                 <span class="ignored-method-name">checkbox</span>
                 <br/>
+                <span class="ignored-method-name">TheTable</span>
+                <br/>
                 <span class="ignored-method-name">EnableAndDisable</span>
                 <br/>
-                <span class="ignored-method-name">opentab</span>
+                <span class="ignored-method-name">HideAndShow</span>
                 <br/>
                 <span class="ignored-method-name">TopAndRelod</span>
+                <br/>
+                <span class="ignored-method-name">Static_Drop_Down</span>
                 <br/>
                 <span class="ignored-method-name">alertandconfirm</span>
                 <br/>
@@ -253,8 +317,24 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <span class="method-name">AddData</span>
+                <span class="method-start">6041 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpdataData</span>
+                <span class="method-start">6065 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">Calaender</span>
-                <span class="method-start">6048 ms</span>
+                <span class="method-start">6072 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DeleteData</span>
+                <span class="method-start">14373 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TakeAScreenShot</span>
+                <span class="method-start">14391 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
